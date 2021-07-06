@@ -1,3 +1,3 @@
 # html and css 공부
 
-WEB STUDY
+HTML & CSS are so much fun!
