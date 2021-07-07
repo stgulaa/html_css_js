@@ -1,3 +1,1 @@
-# html and css 공부
-
-HTML & CSS are so much fun!
+# html + css + js 개인 공부
