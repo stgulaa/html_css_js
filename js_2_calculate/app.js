@@ -33,3 +33,28 @@ player.domitory = "hofflepuff House"; //객체 내부 내용도 추가 가능
 function greeting(){
     console.log("hello");
 }
+
+//const 내부에서 작동하는 function의 경우 : 를 이용
+const person = {
+    name = "harry",
+    sayHello:function(){
+        console.log("hello~");
+    },
+};
+
+console.log(person.name);
+person.sayHello(); 
+
+
+//return
+const age =10;
+function calAge(number){
+     return number +2;
+}
+
+const krAge = calAge(age);
+console.log(krage);
+
+//condititionals
+console.log(typeof age); //typeof는 변수가 어떤 자료형인지 나타냄
+parseInt(age);
