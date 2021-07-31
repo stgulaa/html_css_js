@@ -1,7 +1,9 @@
 const loginInput = document.querySelector("#login-form input");
 const loginForm = document.querySelector("#login-form");
-//const loginButton = document.querySelector("#login-form button");
+const loginButton = document.querySelector("#login-form button");
+const greeting = document.querySelector("#greeting");
 
+const HIDDEN_CLASSNAME = "hidden";
 /*function btnclick(){
     //console.dir(loginInput);
     const username = loginInput.value;
@@ -18,10 +20,12 @@ const loginForm = document.querySelector("#login-form");
 
 loginButton.addEventListener("click", btnclick);
 */
-
-function LoginSubmit(event){
+function onLoginSubmit(event) {
     event.preventDefault();
-    console.log(event);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    greeting.innerText = `안녕하세요 ${username}님 환영합니다.`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-loginForm.addEventListener("submit", LoginSubmit);
+loginForm.addEventListener("submit", onLoginSubmit);
