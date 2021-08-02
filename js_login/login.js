@@ -4,6 +4,7 @@ const loginButton = document.querySelector("#login-form button");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAMEKEY = "username"
 /*function btnclick(){
     //console.dir(loginInput);
     const username = loginInput.value;
@@ -24,8 +25,23 @@ function onLoginSubmit(event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
-    greeting.innerText = `안녕하세요 ${username}님 환영합니다.`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
+    localStorage.setItem(USERNAMEKEY, username);
+    paintGreeting(username);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
+
+const savedUsername = localStorage.getItem(USERNAMEKEY);
+
+function paintGreeting(username){
+    greeting.innerText =`안녕하세요 ${username}님 환영합니다.`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+if(savedUsername === null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+}
+else{
+    paintGreeting(username);
+}
