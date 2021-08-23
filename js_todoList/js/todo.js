@@ -10,22 +10,23 @@ function saveTodos(){
     localStorage.setItem(TODO_KEY, JSON.stringify(toDos)); //DB저장
 }
 
-function btnClick(event){
+function btnClick(event){   //삭제
     const li = event.target.parentElement;
     li.remove();
     toDos=toDos.filter((toDo)=>toDo.id !== parseInt(li.id));
     saveTodos();
 }
 
-function paintTodo(newTodo){
+function paintTodo(newTodo){ //할 일 추가
     const li = document.createElement("li");
     li.id = newTodo.id;
-    const span = document.createElement("span");
-    span.innerText=newTodo.text;
+    li.innerText = newTodo.text;
+    //const span = document.createElement("span");
+    //span.innerText=newTodo.text;
     const button = document.createElement("button");
     button.innerText ="❌";
     button.addEventListener("click", btnClick);
-    li.appendChild(span);
+    //li.appendChild(span);
     li.appendChild(button);
     TodoList.appendChild(li);
 }
