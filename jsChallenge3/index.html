@@ -7,14 +7,14 @@
 </head>
 <body>
     <h1>Random Number Game</h1>
-    <div>
+    <form>
         <span>Generate a number between and </span>
-    </div><br>
-    <div>
-        Guess the number: <input type="text">
-        <input type="submit">
-    </div>
-    <span id ="progression">dd</span><br>
-    <span id = "result">afsd</span>
+        <input type="number" id="rangeNumber" min="0" required><br><br>
+        Guess the number: <input type="number" id="number" required>
+        <input type="submit" value="play!" id="play"><br><br>
+        <span id ="progression">You chose </span><br>
+        <span id = "result">You</span>
+    </form>
+    <script src="RandomNumberGame.js"></script>
 </body>
 </html>
