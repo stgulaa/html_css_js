@@ -5,7 +5,6 @@ const toDoInput = TodoForm.querySelector("input");
 const TODO_KEY = "todos";
 let toDos =[]; //할 일 목록
 
-
 function saveTodos(){
     localStorage.setItem(TODO_KEY, JSON.stringify(toDos)); //DB저장
 }
@@ -44,7 +43,6 @@ function handleToDoSubmit(event){
     paintTodo(newTodoObj);
     saveTodos();
 }
-
 TodoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedTodos = localStorage.getItem(TODO_KEY);

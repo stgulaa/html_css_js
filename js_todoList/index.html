@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class = "hidden" id="login-form">
-        <input required maxlength="8" type="text" placeholder="이름"/>
-        <input type="submit" value="Log In"/>
-    </form>
-    <h2 id ="clock">00:00:00</h2>
-    <h1 class = "hidden" id = "greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="할 일을 적어주세요">
-    </form>
-    <ul id= "todo_list"></ul>
+    <div class="topBar">
+        <form class = "hidden" id="login-form">
+            <input required type="text" placeholder="이름을 적어주세요"/>
+            <input type="submit" value="LOGIN"/>
+        </form>
+        <div id ="clock">00:00:00</div>
+        <h1 class = "hidden" id = "greeting"></h1>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+    </div><br><br><br>
     <div id ="quote">
-        <span></span><br>
-        <span></span>
-    </div>
-    <div id="weather">
         <span></span>
         <span></span>
     </div>
+    <div id ="memo"></div>
+        <div id="todo">
+            <form id="todo-form"><br>
+                <input type="text" placeholder="할 일을 적어주세요">
+            </form>
+        </div>
+        <div id = "todo1"><ul id= "todo_list"></ul></div>
+        
     <script src="C:\Users\stgul\Desktop\html&css&js\html_css_js\js_todoList\js\login.js"></script>
     <script src="C:\Users\stgul\Desktop\html&css&js\html_css_js\js_todoList\js\clock.js"></script>
     <script src="C:\Users\stgul\Desktop\html&css&js\html_css_js\js_todoList\js\quotes.js"></script>

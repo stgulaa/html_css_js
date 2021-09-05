@@ -1,6 +1,7 @@
-const images = ["0.jpeg", "1.jpeg", "2.jpeg","3.jpeg"];
+const images = ["01.jpg", "99A04B475BC982642A.jfif", "99E649475BC9826A17.jfif","1200px-Seoul_panorama_by_yeung_ming_17489238902_cbb7450967_o.jpg"];
 const chosenImage = images[Math.floor(Math.random()*images.length)];
 const bgimg = document.createElement("img");
-
+const memo = document.querySelector("#memo")
 bgimg.src= `img/${chosenImage}`;
-document.body.appendChild(bgimg);
+memo.append(bgimg);
+//document.body.style.backgroundImage = `url(${bgimg.src})`;
