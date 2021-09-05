@@ -2,3 +2,48 @@
     /*요소를 숨기는 역할*/
     display: none;
 }
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(255, 221, 227);
+}
+.topBar{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    border-top: solid 2px rgb(230, 104, 125);
+    border-bottom: solid 5px rgb(230, 104, 125);
+}
+#clock{
+    font-size: 16px;
+}
+#quote{
+    height: 70px;
+    border-bottom: solid 5px rgb(230, 104, 125);
+    background-color: rgb(255, 221, 227);
+    display: flex;
+    justify-content:center;
+}
+#todo{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+}
+#todo1{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+#todo1 li{
+    height: 40px;
+}
+
+#todo-form input{
+    border-width: 20px;
+    border:solid 3px rgb(230, 104, 125);
+    height: 30px;
+    width: 300px;
+}
+#memo img{
+    height: 300px;
+    width: 100%;
+}
