@@ -1,0 +1,22 @@
+div{
+    width: 100%;
+    bottom: 50px; /*페이지 아래에서부터 50px 띄워놓는 것을 의미*/
+    position: absolute;
+}
+.ghost-button{
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    margin: 50px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+.ghost-button:hover{
+    background-color: #fff;
+    color: black;
+}
+body{
+    background-color: pink;
+}
